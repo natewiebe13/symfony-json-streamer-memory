@@ -29,7 +29,7 @@ Uses the JsonStreamer component to iterate over the items:
 php -d memory_limit=4G list_symfony.php
 ```
 
-### Native Test - Uses ~25MB
+### `halaxa/json-machine` Test - Uses ~84MB
 
 Uses `halaxa/json-machine` to stream the json file to iterate over the items:
 
@@ -69,7 +69,7 @@ Uses the JsonStreamer component to iterate over the items:
 php -d memory_limit=4G nested_list_symfony.php
 ```
 
-### Native Test - Uses ~25MB
+### `halaxa/json-machine` Test - Uses ~84MB
 
 Uses `halaxa/json-machine` to stream the json file to iterate over the items:
 

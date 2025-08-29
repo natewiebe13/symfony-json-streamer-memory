@@ -18,7 +18,7 @@ $itemMap = [];
 $i = 0;
 
 foreach ($items as $item) {
-    $itemMap[$item->itemId] = $item->modificationDate;
+    $itemMap[(int) $item->itemId] = new \DateTimeImmutable($item->modificationDate);
 
     if ($i++ % $echoInterval === 0) {
         echoMemory('Iteration ' . $i);
