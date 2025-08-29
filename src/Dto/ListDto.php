@@ -10,7 +10,7 @@ use Symfony\Component\JsonStreamer\Attribute\JsonStreamable;
 #[JsonStreamable]
 class ListDto {
     /**
-     * @var list<TItem>
+     * @var iterable<TItem, int>
      */
     public iterable $items;
 }
