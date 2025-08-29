@@ -18,7 +18,7 @@ $echoInterval = 50_000;
 
 $jsonStreamer = JsonStreamReader::create();
 
-$type = Type::generic(Type::object(ListDto::class), Type::object(ItemDto::class));
+$type = Type::object(ListDto::class);
 
 $items = $jsonStreamer->read($json, $type);
 assert($items instanceof ListDto);
