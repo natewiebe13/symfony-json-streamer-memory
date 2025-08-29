@@ -1,0 +1,17 @@
+{
+    "_hash": "c09d1e740b585c9c3806a2f6a04e5af806db948b7cb25ca4c66f9bedf450104b",
+    "patches": {
+        "symfony/json-streamer": [
+            {
+                "package": "symfony/json-streamer",
+                "description": "Support iterating over arrays without casting",
+                "url": "./pr-61561.patch",
+                "sha256": "43638ad32c377e9dc6126c4350ed0ae90aa9e9b5b0ac07e152ec4e8800520510",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}

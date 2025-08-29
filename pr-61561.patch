@@ -1,0 +1,21 @@
+From fd4737deea76508c28cf13f8e8d80e58026f1f56 Mon Sep 17 00:00:00 2001
+From: Mathias Arlaud <mathias.arlaud@gmail.com>
+Date: Fri, 29 Aug 2025 18:57:27 +0200
+Subject: [PATCH] [JsonStreamer] Fix decoding iterable lists
+
+---
+ Read/PhpAstBuilder.php       | 2 +-
+
+diff --git a/Read/PhpAstBuilder.php b/Read/PhpAstBuilder.php
+index 7a6e23762beca..e872a40ab7030 100644
+--- a/Read/PhpAstBuilder.php
++++ b/Read/PhpAstBuilder.php
+@@ -382,7 +382,7 @@ private function buildCollectionNodeStatements(CollectionNode $node, bool $decod
+         $prepareDataStmts = $decodeFromStream ? [
+             new Expression(new Assign($this->builder->var('data'), $this->builder->staticCall(
+                 new FullyQualified(Splitter::class),
+-                $node->getType()->isList() ? 'splitList' : 'splitDict',
++                !$node->getType()->getCollectionKeyType()->isIdentifiedBy(TypeIdentifier::STRING) ? 'splitList' : 'splitDict',
+                 [$this->builder->var('stream'), $this->builder->var('offset'), $this->builder->var('length')],
+             ))),
+         ] : [];
