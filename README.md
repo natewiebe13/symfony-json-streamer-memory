@@ -21,7 +21,7 @@ Loads the entire json file into memory and iterates over the items:
 php -d memory_limit=4G list_native.php
 ```
 
-### Symfony Test - Uses ~84MB
+### Symfony Test - Uses ~86MB
 
 Uses the JsonStreamer component to iterate over the items:
 
@@ -61,7 +61,7 @@ Loads the entire json file into memory and iterates over the items:
 php -d memory_limit=4G nested_list_native.php
 ```
 
-### Symfony Test - Uses ~2.1GB
+### Symfony Test - Uses ~86MB
 
 Uses the JsonStreamer component to iterate over the items:
 
