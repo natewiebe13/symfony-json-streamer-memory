@@ -4,13 +4,10 @@ namespace App\Dto;
 
 use Symfony\Component\JsonStreamer\Attribute\JsonStreamable;
 
-/**
- * @template TItem of ItemDto
- */
 #[JsonStreamable]
 class ListDto {
     /**
-     * @var iterable<TItem, int>
+     * @var iterable<int, ItemDto>
      */
     public iterable $items;
 }
